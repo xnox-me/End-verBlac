@@ -2,6 +2,12 @@
 
 This project uses AI to generate and execute terminal commands based on user prompts.
 
+## Custom Model Usage
+
+For detailed information on the custom model, its advantages, and how to use it, please see [CUSTOM_MODEL_USAGE.md](CUSTOM_MODEL_USAGE.md).
+
+For detailed information about the OpenAI models used, including image and video generation models, please see the [OpenAI Models Overview](README_models.md).
+
 ## Setup
 
 1. Create a Python virtual environment and activate it.
