@@ -4,22 +4,42 @@ from openai import OpenAI
 import subprocess
 import os
 
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# Function to get AI-generated terminal command
+
+def get_ai_command(prompt):
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant that ONLY responds with valid shell commands without any explanations or additional text. When the user input is vague or incomplete, respond with helpful shell commands that prompt for more details or provide useful scaffolding commands. Examples include: \n- echo \"Please provide the specific app details or requirements.\"\n- echo \"What features do you want to include?\"\n- echo \"Starting project setup...\"\n- mkdir my_app && cd my_app\n- touch README.md\n- echo \"# Project Title\" > README.md\n- git init\n- echo \"Setup complete. Please specify next steps.\""},
+            {"role": "user", "content": prompt}
+        ]
+    )
+    return response.choices[0].message.content.strip()
+
+# Function to execute terminal command
+
 def execute_command(command):
     try:
-        result = subprocess.run(
-            ["bash", "-c", command],
-            capture_output=True,
-            text=True,
-            check=True
-        )
+        # Wrap command in bash -c to handle complex commands safely
+        result = subprocess.run(["bash", "-c", command], capture_output=True, text=True)
         return result.stdout, result.stderr
-    except subprocess.CalledProcessError as e:
-        return e.stdout, e.stderr
-    except FileNotFoundError:
-        return "", f"Error: Command not found: {command}"
+    except Exception as e:
+        return "", str(e)
+
+# Main loop
 
 def main():
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    logo = r"""
+     ___    ___  ___  ___      ___   _   _  ___   ___ 
+    | _ )  / _ \| _ \/ __|    / __| | | | || __| | __|
+    | _ \ | (_) |   /\__ \   | (__  | |_| || _|  | _| 
+    |___/  \___/|_|_\|___/    \___|  \___/ |___| |___|
+    """
+    print(logo)
+
+
     journal_path = "chat_journal.txt"
 
     # Available models with descriptions and media
@@ -116,10 +136,10 @@ def main():
             context_info = f"Current directory is {context_state['current_directory']}. "
         return context_info + user_prompt
 
-    print("AI Terminal Control - Type your prompt or 'exit' to quit")
-    print("Type ':alias name=command' to create an alias.")
-    print("Use up/down arrow keys to navigate command history.")
-    print("Type ':multi' to enter multi-line command mode, end with a single '.' on a line.")
+    print("\033[1;34mAI Terminal Control\033[0m - Type your prompt or '\033[1;31mexit\033[0m' to quit")
+    print("\033[1;32mType ':alias name=command' to create an alias.\033[0m")
+    print("\033[1;33mUse up/down arrow keys to navigate command history.\033[0m")
+    print("\033[1;35mType ':multi' to enter multi-line command mode, end with a single '.' on a line.\033[0m")
 
     while True:
         try:
@@ -140,16 +160,12 @@ def main():
                 cmd = cmd.strip()
                 aliases[name] = cmd
                 print(f"Alias '{name}' set to '{cmd}'")
-                from datetime import datetime
-                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open(journal_path, "a") as journal_file:
-                    journal_file.write(f"[{timestamp}] User: {user_input}\n\n")
             else:
                 print("Invalid alias format. Use :alias name=command")
             continue
 
         if user_input == ':multi':
-            print("Enter multi-line command. End with a single '.' on a line.")
+            print("\033[1;36mEnter multi-line command. End with a single '.' on a line.\033[0m")
             lines = []
             while True:
                 line = input()
