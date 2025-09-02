@@ -1,5 +1,5 @@
 {
-  "name": "dtc-backend",
+  "name": "dododex-backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -21,9 +21,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.0",
     "socket.io": "^4.8.1",
+    "weaviate-ts-client": "^2.2.0",
     "web3": "^4.16.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
   }
 }

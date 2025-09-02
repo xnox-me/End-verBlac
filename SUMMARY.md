@@ -1,4 +1,4 @@
-# DEX Terminal Clone (DTC) - Project Summary
+# DODODEX Trading Platform - Project Summary
 
 ## Overview
 
@@ -33,6 +33,12 @@ This project is a comprehensive DEX trading terminal specifically designed for d
 - Trade history tracking
 - Portfolio management
 
+### 5. Weaviate Cloud Integration
+- Semantic search across trading pairs, trades, and users
+- AI-powered data insights
+- Scalable vector database for enhanced search capabilities
+- Real-time data synchronization between MongoDB and Weaviate
+
 ## Technology Stack
 
 ### Frontend
@@ -49,6 +55,7 @@ This project is a comprehensive DEX trading terminal specifically designed for d
 - Socket.IO for real-time communication
 - JWT for authentication
 - Web3.js for blockchain integration
+- Weaviate Cloud for semantic search and AI capabilities
 - RESTful API architecture
 
 ### DevOps
@@ -60,7 +67,7 @@ This project is a comprehensive DEX trading terminal specifically designed for d
 ## Project Structure
 
 ```
-dtc/
+dododex/
 ├── frontend/              # React frontend application
 │   ├── src/
 │   │   ├── components/    # React components
@@ -102,6 +109,15 @@ dtc/
 - `PUT /api/webhooks/:id` - Update webhook
 - `DELETE /api/webhooks/:id` - Delete webhook
 
+### Weaviate Integration
+- `GET /api/weaviate/trading-pairs` - Search trading pairs
+- `GET /api/weaviate/trading-pairs/semantic` - Semantic search trading pairs
+- `POST /api/weaviate/trading-pairs` - Add trading pair
+- `GET /api/weaviate/trades` - Search trades
+- `POST /api/weaviate/trades` - Add trade
+- `GET /api/weaviate/users` - Search users
+- `POST /api/weaviate/users` - Add user
+
 ## Webhook Events
 
 1. **Price Crossing** - Triggered when price crosses a threshold
@@ -124,6 +140,7 @@ The application can be deployed using:
 - [DEX Trading](./docs/dex-trading.md)
 - [System Architecture](./docs/architecture.md)
 - [Deployment Guide](./docs/deployment.md)
+- [Weaviate Cloud Integration](./docs/weaviate-integration.md)
 
 ## Getting Started
 
@@ -131,9 +148,10 @@ The application can be deployed using:
 2. Install dependencies for both frontend and backend
 3. Configure environment variables
 4. Start MongoDB
-5. Run the backend server
-6. Run the frontend development server
-7. Access the application at http://localhost:3000
+5. Set up Weaviate Cloud account and configure credentials
+6. Run the backend server
+7. Run the frontend development server
+8. Access the application at http://localhost:3000
 
 ## Future Enhancements
 
@@ -145,5 +163,7 @@ The application can be deployed using:
 6. Backtesting capabilities
 7. Automated trading strategies
 8. Multi-language support
+9. Enhanced AI-powered trading recommendations using Weaviate
+10. Natural language querying interface
 
 This project provides a solid foundation for a professional DEX trading platform with room for further customization and enhancement based on specific requirements.

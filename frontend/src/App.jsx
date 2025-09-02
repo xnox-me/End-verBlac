@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
 import ChartView from './components/ChartView';
 import TradePanel from './components/TradePanel';
 import WebhookManager from './components/WebhookManager';
-import LandingPage from './components/LandingPage';
+import WeaviateSearch from './components/WeaviateSearch';
 import About from './components/About';
 import Contact from './components/Contact';
-import './App.css';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/chart" element={<ChartView />} />
           <Route path="/trade" element={<TradePanel />} />
           <Route path="/webhooks" element={<WebhookManager />} />
+          <Route path="/weaviate-search" element={<WeaviateSearch />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

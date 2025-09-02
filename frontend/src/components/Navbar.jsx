@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: 'Chart', path: '/chart' },
     { name: 'Trade', path: '/trade' },
     { name: 'Webhooks', path: '/webhooks' },
+    { name: 'Weaviate Search', path: '/weaviate-search' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];

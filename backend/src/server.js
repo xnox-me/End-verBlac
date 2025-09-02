@@ -18,23 +18,41 @@ const io = socketIo(server, {
   }
 });
 
+// Import Weaviate service
+const weaviateService = require('./services/weaviateService');
+
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dtc', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dododex', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
+// Initialize Weaviate schema
+const initializeWeaviate = async () => {
+  try {
+    const success = await weaviateService.initializeSchema();
+    if (success) {
+      console.log('Weaviate schema initialized successfully');
+    } else {
+      console.log('Failed to initialize Weaviate schema');
+    }
+  } catch (error) {
+    console.error('Error initializing Weaviate:', error);
+  }
+};
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/charts', require('./routes/charts'));
 app.use('/api/trades', require('./routes/trades'));
 app.use('/api/webhooks', require('./routes/webhooks'));
+app.use('/api/weaviate', require('./routes/weaviate')); // Add Weaviate routes
 
 // Store io instance in app for access in routes
 app.set('io', io);
@@ -56,6 +74,8 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
+server.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
+  // Initialize Weaviate when server starts
+  await initializeWeaviate();
 });

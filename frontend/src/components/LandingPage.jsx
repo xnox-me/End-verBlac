@@ -17,7 +17,7 @@ const LandingPage = () => {
             </h1>
           </div>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-            Advanced charting platform for decentralized exchange trading with real-time data and webhook notifications
+            Advanced charting platform for decentralized exchange trading with real-time data, webhook notifications, and AI-powered semantic search
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
@@ -53,10 +53,10 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition duration-300 shadow-lg">
-            <div className="text-purple-400 text-3xl mb-4">🔔</div>
-            <h3 className="text-xl font-bold mb-2">Webhook Alerts</h3>
+            <div className="text-purple-400 text-3xl mb-4">🧠</div>
+            <h3 className="text-xl font-bold mb-2">AI-Powered Search</h3>
             <p className="text-slate-400">
-              Real-time notifications for price alerts, trade executions, and market events.
+              Semantic search capabilities powered by Weaviate Cloud for intelligent data discovery.
             </p>
           </div>
         </div>
@@ -94,9 +94,9 @@ const LandingPage = () => {
             <div className="flex items-start">
               <div className="text-blue-400 mr-3 mt-1">✓</div>
               <div>
-                <h4 className="font-bold mb-1">Portfolio Tracking</h4>
+                <h4 className="font-bold mb-1">Weaviate Integration</h4>
                 <p className="text-slate-400 text-sm">
-                  Monitor your holdings and performance across all connected wallets.
+                  AI-powered semantic search across trading pairs, trades, and user data.
                 </p>
               </div>
             </div>
