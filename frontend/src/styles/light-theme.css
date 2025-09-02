@@ -1,0 +1,71 @@
+/* Light theme overrides for DODODEX Trading Platform */
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.light body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.light .bg-slate-900 {
+  background-color: var(--bg-primary);
+}
+
+.light .bg-slate-800 {
+  background-color: var(--bg-secondary);
+}
+
+.light .bg-slate-800\/50 {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+.light .text-slate-100 {
+  color: var(--text-primary);
+}
+
+.light .text-slate-300 {
+  color: var(--text-secondary);
+}
+
+.light .text-slate-400 {
+  color: #94a3b8;
+}
+
+.light .border-slate-700 {
+  border-color: var(--border-color);
+}
+
+.light .shadow-lg {
+  box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+}
+
+.light .card-primary {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.light .card-secondary {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+/* Update scrollbar for light theme */
+.light ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

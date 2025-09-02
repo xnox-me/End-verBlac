@@ -1,4 +1,4 @@
-# DEX Terminal Clone (DTC)
+# DODODEX Trading Platform
 
 A comprehensive DEX trading terminal with advanced charting capabilities and webhook features.
 
