@@ -7,14 +7,14 @@ const LandingPage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-            DEX TradingView Clone
+            DEX Terminal Clone (DTC)
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10">
             Advanced charting platform for decentralized exchange trading with real-time data and webhook notifications
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/chart" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
-              Launch Trading Platform
+              Launch DTC Platform
             </Link>
             <a href="#features" className="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out">
               Learn More

@@ -1,6 +1,6 @@
 # Charting System Documentation
 
-The charting system provides real-time visualization of market data with TradingView-like features.
+The charting system provides real-time visualization of market data with professional features.
 
 ## Chart Types
 
@@ -147,9 +147,9 @@ socket.emit('unsubscribe', { pair: 'ETH/USDT' });
 3. **Compression** - Data is compressed for faster transmission
 4. **Throttling** - Real-time updates are throttled to prevent overwhelming clients
 
-## Integration with TradingView Charting Library
+## Integration with Professional Charting Library
 
-This system is designed to integrate with the TradingView Charting Library:
+This system is designed to integrate with a professional charting library:
 
 1. **Data Feed** - Custom data feed adapter for real-time data
 2. **Indicators** - Support for custom indicators
@@ -160,7 +160,7 @@ This system is designed to integrate with the TradingView Charting Library:
 
 ```javascript
 // Initialize chart
-const chart = new TradingView.Chart({
+const chart = new Chart({
   container: document.getElementById('chart-container'),
   symbol: 'ETH/USDT',
   interval: '1h',

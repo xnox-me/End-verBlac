@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">About DEX TradingView Clone</h1>
+      <h1 className="text-3xl font-bold mb-6">About DEX Terminal Clone (DTC)</h1>
       
       <div className="bg-slate-800 rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
@@ -23,7 +23,7 @@ const About = () => {
           <ul className="space-y-2 text-slate-300">
             <li className="flex items-start">
               <span className="text-green-400 mr-2">✓</span>
-              <span>Real-time charting with TradingView-like interface</span>
+              <span>Real-time charting with professional interface</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-400 mr-2">✓</span>
@@ -65,7 +65,7 @@ const About = () => {
             </li>
             <li className="flex items-start">
               <span className="text-cyan-400 mr-2">•</span>
-              <span>Charting: TradingView Charting Library</span>
+              <span>Charting: Professional Charting Library</span>
             </li>
           </ul>
         </div>

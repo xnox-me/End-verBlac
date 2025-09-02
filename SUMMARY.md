@@ -1,14 +1,14 @@
-# DEX TradingView Clone - Project Summary
+# DEX Terminal Clone (DTC) - Project Summary
 
 ## Overview
 
-This project is a comprehensive TradingView clone specifically designed for decentralized exchanges (DEX) with advanced charting capabilities and webhook features. The platform provides traders with professional-grade tools to analyze markets and execute trades on decentralized exchanges.
+This project is a comprehensive DEX trading terminal specifically designed for decentralized exchanges (DEX) with advanced charting capabilities and webhook features. The platform provides traders with professional-grade tools to analyze markets and execute trades on decentralized exchanges.
 
 ## Key Features
 
 ### 1. Advanced Charting
 - Real-time price charts with multiple timeframes (1m, 5m, 15m, 1h, 4h, 1d)
-- Professional charting interface similar to TradingView
+- Professional charting interface
 - Technical analysis indicators
 - Drawing tools for technical analysis
 - Customizable chart layouts
@@ -60,7 +60,7 @@ This project is a comprehensive TradingView clone specifically designed for dece
 ## Project Structure
 
 ```
-tradingview-clone/
+dtc/
 ├── frontend/              # React frontend application
 │   ├── src/
 │   │   ├── components/    # React components

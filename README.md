@@ -1,10 +1,10 @@
-# DEX TradingView Clone
+# DEX Terminal Clone (DTC)
 
-A comprehensive TradingView clone for decentralized exchanges (DEX) with advanced charting capabilities and webhook features.
+A comprehensive DEX trading terminal with advanced charting capabilities and webhook features.
 
 ## Features
 
-- Real-time charting with TradingView-like interface
+- Real-time charting with professional interface
 - DEX trading panel with buy/sell functionality
 - Webhook management system for price alerts and trade notifications
 - Responsive design for desktop and mobile devices

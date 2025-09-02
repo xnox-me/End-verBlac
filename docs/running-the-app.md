@@ -1,6 +1,6 @@
 # Running the Application
 
-This guide explains how to run the DEX TradingView Clone application locally.
+This guide explains how to run the DEX Terminal Clone (DTC) application locally.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Before running the application, ensure you have the following installed:
 
 ```bash
 git clone <repository-url>
-cd tradingview-clone
+cd dtc
 ```
 
 ### 2. Install Dependencies
@@ -42,7 +42,7 @@ Create a `.env` file in the backend directory with the following variables:
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/tradingview-clone
+MONGODB_URI=mongodb://localhost:27017/dtc
 JWT_SECRET=your_jwt_secret_key
 ```
 
@@ -115,7 +115,7 @@ npm run preview
 ## Project Structure
 
 ```
-tradingview-clone/
+dtc/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/

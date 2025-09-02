@@ -12,7 +12,7 @@ git init
 git add .
 
 # Make the first commit
-git commit -m "Initial commit: DEX TradingView Clone with webhook features"
+git commit -m "Initial commit: DEX Terminal Clone (DTC) with webhook features"
 
 # Add the remote origin (you'll need to set this to your actual GitHub repo)
 echo "Repository prepared for upload to GitHub"

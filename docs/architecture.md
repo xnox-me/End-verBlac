@@ -2,7 +2,7 @@
 
 ## Overview
 
-The DEX TradingView Clone consists of a React frontend and a Node.js backend, with MongoDB for data storage and Web3 integration for blockchain interactions.
+The DEX Terminal Clone (DTC) consists of a React frontend and a Node.js backend, with MongoDB for data storage and Web3 integration for blockchain interactions.
 
 ```mermaid
 graph TB

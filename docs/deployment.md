@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide explains how to deploy the DEX TradingView Clone application to production.
+This guide explains how to deploy the DEX Terminal Clone (DTC) application to production.
 
 ## Deployment Options
 
@@ -17,7 +17,7 @@ The easiest way to deploy the application is using Docker and Docker Compose.
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd tradingview-clone
+cd dtc
 ```
 
 2. Update environment variables in `docker-compose.yml` if needed
@@ -57,7 +57,7 @@ npm ci --only=production
 ```bash
 export NODE_ENV=production
 export PORT=5000
-export MONGODB_URI=mongodb://localhost:27017/tradingview-clone
+export MONGODB_URI=mongodb://localhost:27017/dtc
 export JWT_SECRET=your_jwt_secret_key
 ```
 

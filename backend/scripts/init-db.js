@@ -10,7 +10,7 @@ const Webhook = require('../src/models/Webhook');
 const Trade = require('../src/models/Trade');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/tradingview-clone', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dtc', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

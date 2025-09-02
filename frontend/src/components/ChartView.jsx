@@ -4,7 +4,7 @@ const ChartView = ({ pair, timeframe }) => {
   const chartContainerRef = useRef(null);
 
   useEffect(() => {
-    // In a real implementation, this would initialize the TradingView chart
+    // In a real implementation, this would initialize the chart
     // For this example, we'll create a simple placeholder
     if (chartContainerRef.current) {
       chartContainerRef.current.innerHTML = `
@@ -13,7 +13,7 @@ const ChartView = ({ pair, timeframe }) => {
             <div class="text-xl font-bold mb-2">${pair} Chart</div>
             <div class="text-slate-400">Timeframe: ${timeframe}</div>
             <div class="mt-4 text-slate-500">
-              TradingView chart would be displayed here
+              Chart would be displayed here
             </div>
           </div>
         </div>

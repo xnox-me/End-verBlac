@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 font-bold text-xl text-blue-400">
-              DEX TradingView
+              DEX Terminal
             </div>
           </div>
           <div className="hidden md:block">

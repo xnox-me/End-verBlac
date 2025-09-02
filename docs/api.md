@@ -1,6 +1,6 @@
 # API Documentation
 
-This document provides detailed information about the REST API endpoints available in the DEX TradingView Clone application.
+This document provides detailed information about the REST API endpoints available in the DEX Terminal Clone (DTC) application.
 
 ## Base URL
 

@@ -4,7 +4,7 @@ services:
   # MongoDB service
   mongodb:
     image: mongo:5.0
-    container_name: tradingview-mongodb
+    container_name: dtc-mongodb
     restart: always
     ports:
       - "27017:27017"
@@ -19,14 +19,14 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: tradingview-backend
+    container_name: dtc-backend
     restart: always
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://admin:password@mongodb:27017/tradingview-clone?authSource=admin
-      - JWT_SECRET=tradingview_clone_secret_key
+      - MONGODB_URI=mongodb://admin:password@mongodb:27017/dtc?authSource=admin
+      - JWT_SECRET=dtc_secret_key
     depends_on:
       - mongodb
     volumes:
@@ -38,7 +38,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: tradingview-frontend
+    container_name: dtc-frontend
     restart: always
     ports:
       - "3000:3000"
