@@ -11,7 +11,7 @@ const Logo = ({ size = 'md', className = '' }) => {
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
       <img 
-        src="/src/assets/logo.png" 
+        src="https://i.imgur.com/gkfyyWy.png" 
         alt="DODODEX Logo" 
         className="w-full h-full object-contain"
       />
